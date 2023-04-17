@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLanterna.MainPage">
+
+    <Grid ColumnDefinitions="*, *"
+          BackgroundColor="#0f0f0f"
+          RowDefinitions="100, 180, *, *, *, *, *">
+
+        <Label Text="LANTERNA🍷🗿"
+               Style="{StaticResource titulo}"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               Grid.Row="0"
+               Grid.ColumnSpan="2"/>
+
+        <ImageButton x:Name="buttonOnOff" Grid.Column="0"
+                     BackgroundColor="#232323"
+                     Grid.Row="1" Grid.ColumnSpan="2"
+                     Clicked="buttonOnOff_Clicked"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Status da Bateria"
+               Style="{StaticResource subTitulo}"/>
+
+        <Label Grid.Row="3" 
+               Grid.Column="0" 
+               Text="Carga Restante:"
+               Style="{StaticResource textoCinza}"/>
+        
+        <Label Grid.Row="4" 
+               Grid.Column="0" 
+               Text="Status da Bateria:"
+               Style="{StaticResource textoCinza}"/>
+
+        <Label Grid.Row="5" 
+               Grid.Column="0" 
+               Text="Fonte de Energia:"
+               Style="{StaticResource textoCinza}"/>
+
+        <Label x:Name="labelCargaRestante" 
+               Grid.Row="3"
+               Grid.Column="1"
+               Text="80%"/>
+
+        <Label x:Name="labelStatusBateria" 
+               Grid.Row="4"
+               Grid.Column="1"
+               Text="Descarregando"/>
+
+        <Label x:Name="labelFonteEnergia" 
+               Grid.Row="5"
+               Grid.Column="1"
+               Text="Bateria"/>
+
+    </Grid>
+
+</ContentPage>
